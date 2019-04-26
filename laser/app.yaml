@@ -1,0 +1,13 @@
+ runtime: nodejs
+ env: flex
+ api_version: 1
+ threadsafe: true
+
+ handlers:
+ - url: /
+   static_files: ./index.html
+   upload: ./index.html
+
+ - url: /(.*)
+   static_files: app/\1
+   upload: app/(.*)
